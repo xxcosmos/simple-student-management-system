@@ -10,9 +10,6 @@
 using namespace std;
 
 
-// 学生全局唯一索引
-int student_index = 1;
-
 
 void print_info() {
     cout << "欢迎进入学生信息管理系统！" << endl;
@@ -54,7 +51,7 @@ student input_student_information() {
 
     cout << "请输入学生专业：" << endl;
     cin >> major;
-    student student(name, age, school, major, student_index++);
+    student student(name, age, school, major);
     string temp;
     getline(cin, temp);
     return student;

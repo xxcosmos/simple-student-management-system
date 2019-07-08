@@ -7,9 +7,11 @@
 
 #include <string>
 #include <ostream>
+#include "../homework_project/homework.h"
 
-using namespace std;
-
+using std::string;
+using std::ostream;
+using std::vector;
 
 /**
  * 学生类
@@ -21,8 +23,14 @@ private:
     int age;
     string school;
     string major;
+    string type;
+//    homework* homework_list;
 public:
-    student(const string &name, int age, const string &school, const string &major,int num);
+//    homework *getHomeworkList() const;
+//
+//    void setHomeworkList(homework *homeworkList);
+
+    student(string name, int age, string school, string major);
 
     friend ostream &operator<<(ostream &os, const student &student);
 
@@ -31,19 +39,23 @@ public:
 
     const string &getName() const;
 
-    void setName(const string &name);
+    void setName(const string &basicString);
 
     int getAge() const;
 
-    void setAge(int age);
+    const string &getType() const;
+
+    void setType(const string &type);
+
+    void setAge(int i);
 
     const string &getSchool() const;
 
-    void setSchool(const string &school);
+    void setSchool(const string &basicString);
 
     const string &getMajor() const;
 
-    void setMajor(const string &major);
+    void setMajor(const string &basicString);
 };
 
 

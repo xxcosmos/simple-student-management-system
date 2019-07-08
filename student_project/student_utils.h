@@ -7,6 +7,7 @@
 
 #include "student.h"
 
+using std::vector;
 
 /**
  * 欢迎信息
