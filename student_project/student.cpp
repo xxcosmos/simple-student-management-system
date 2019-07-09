@@ -1,3 +1,5 @@
+#include <utility>
+
 
 
 //
@@ -70,6 +72,18 @@ const string &student::getType() const {
 
 void student::setType(const string &type) {
     student::type = type;
+}
+
+student::student(string name, int age, string school, string major, string type) : id(2015000 + student_index++),
+                                                                                   name(std::move(name)), age(age),
+                                                                                   school(std::move(school)),
+                                                                                   major(std::move(major)),
+                                                                                   type(std::move(type)) {}
+
+student::student() {}
+
+student::~student() {
+
 }
 
 //homework *student::getHomeworkList() const {

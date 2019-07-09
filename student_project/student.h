@@ -24,10 +24,13 @@ private:
     string school;
     string major;
     string type;
-//    homework* homework_list;
+    vector<homework> homework_list;
 public:
 //    homework *getHomeworkList() const;
 //
+    student(string name, int age, string school, string major, string type);
+
+    student();
 //    void setHomeworkList(homework *homeworkList);
 
     student(string name, int age, string school, string major);
@@ -56,6 +59,8 @@ public:
     const string &getMajor() const;
 
     void setMajor(const string &basicString);
+
+    virtual ~student();
 };
 
 

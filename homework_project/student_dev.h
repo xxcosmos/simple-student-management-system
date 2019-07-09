@@ -10,13 +10,11 @@
 
 class student_dev : public student {
 public:
-    student_dev(const student &student1) : student(student1.getName(), student1.getAge(), student1.getSchool(),
-                                                   student1.getMajor()) {
-        this->setType("dev");
-//        this->setHomeworkList(
-//                nullptr);
-    };
+    student_dev();
 
+    virtual ~student_dev();
+
+    student_dev( string name, int age,  string school,  string major);
 };
 
 

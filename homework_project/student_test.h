@@ -10,11 +10,8 @@
 
 class student_test : public student {
 public:
-    explicit student_test(const student &student1) : student(student1.getName(), student1.getAge(),
-                                                             student1.getSchool(), student1.getMajor()) {
-        this->setType("test");
-//        this->setHomeworkList(nullptr);
-    };
+    student_test(student student1,
+                 const vector<homework> &homeworkList);
 
 
 };

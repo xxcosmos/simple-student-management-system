@@ -10,12 +10,13 @@
 
 int main(){
     vector<homework> homework_list;
-    vector<student> student_list;
+    vector<student*> student_list;
     std::string operation;
     while (getline(std::cin, operation)){
         if(operation=="new student dev"){
-            student student = student_dev(input_student_information());
-            student_list.push_back(student);
+            student temp_student = input_student_information();
+            student *student1 = new  student_dev(temp_student.getName(), temp_student.getAge(), temp_student.getSchool(), temp_student.getMajor());
+            student_list.push_back(temp_student);
             cout<<"成功创建开发类学生"<<endl;
             continue;
         }
